@@ -1,0 +1,36 @@
+public class CuentaException Extends Exception {
+          public Cuenta (String a){
+          super("campo vacio");
+}
+}
+class UsuarioException Extends CuentaException {
+             public Usuario (String x){
+              super("Incorrecto");
+}
+}
+class ContraseñaException Extends CuentaException {
+            public Contraseña (String y){
+             super("Inválida");
+}
+}
+class TeléfonoException Extends UsuarioException {
+            public Teléfono (String num){
+            super("No existe");
+}
+}
+class RedsocialvinculadaException Extends UsuarioException {
+          public Redsocialvinculada(String red){
+           super("No está vinculada a ese red");
+}
+}
+
+class NcontraseñaException Extends ContraseñaException {
+             public Ncontraseña(String nc){
+              super ("No coinciden");
+}
+}
+class Erroresdecontraseña Extends ContraseñaException {
+           public Erroresdecontraseña (String ec){
+            super ("Solo se admiten caracteres alfanuméricos");
+}
+}
